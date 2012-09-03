@@ -11,9 +11,9 @@ meta-spec:
   version: 1.4
 name: Net-Amazon-TreeHash
 provides:
-  TreeHash:
+  Net::Amazon::TreeHash:
     file: lib/Net/Amazon/TreeHash.pm
-    version: 0.7
+    version: 0.71
 requires:
   Digest::SHA: 0
-version: 0.7
+version: 0.71

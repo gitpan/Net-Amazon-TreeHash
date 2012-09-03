@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Test::Simple tests => 31*7*3 + 4*3*3;
 use lib qw/../;
-use TreeHash;
+use Net::Amazon::TreeHash;
 
 
 
@@ -487,7 +487,7 @@ for my $i (1..31) {
 	for my $j (qw/-3 -2 -1 0 1 2 3/) {
 		my $size = $i*$chunksize+$j;
 		my $dataref = get_pseudo_random_array($size);
-		my $th = TreeHash->new(unit => $chunksize);
+		my $th = Net::Amazon::TreeHash->new(unit => $chunksize);
 		$th->eat_data($dataref);
     	$th->calc_tree();
     	my $hash = $th->get_final_hash();
@@ -504,7 +504,7 @@ for my $i (1..4) {
 	for my $j (qw/-1 0 1/) {
 		my $size = $i*$chunksize+$j;
 		my $dataref = get_pseudo_random_array($size);
-		my $th = $chunksize == 1048576 ? TreeHash->new() : TreeHash->new(unit => $chunksize);
+		my $th = $chunksize == 1048576 ? Net::Amazon::TreeHash->new() : Net::Amazon::TreeHash->new(unit => $chunksize);
 		$th->eat_data($dataref);
     	$th->calc_tree();
     	my $hash = $th->get_final_hash();

@@ -19,7 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-package TreeHash;
+package Net::Amazon::TreeHash;
 
 
 
@@ -33,11 +33,11 @@ Net::Amazon::TreeHash - An implementation of the Amazon AWS TreeHash checksum al
 
 =head1 VERSION
 
-Version 0.7
+Version 0.71
 
 =cut
 
-our $VERSION = '0.7';
+our $VERSION = '0.71';
 
 =head1 SYNOPSIS
 
@@ -47,7 +47,7 @@ Usage:
 
 	use Net::Amazon::TreeHash;
 
-	my $th = TreeHash->new();
+	my $th = Net::Amazon::TreeHash->new();
 	
 	$th->eat_data(\$mydata);
 	...
